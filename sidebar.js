@@ -25,61 +25,72 @@ menuIcon.addEventListener('click', function() {
     }
 });
 
-// عندما يبدأ اللمس
-// document.addEventListener('touchstart', (e) => {
-//     startX = e.touches[0].clientX;
-//     // إذا كان السايدبار مغلقًا، تأكد من أن السحب بدأ من مسافة أقل من 10vw
-//     if (!isSidebarOpen && startX >= window.innerWidth - (window.innerWidth * 0.2)) {
-//         isDragging = true;
-//         currentX = startX; // إعادة ضبط currentX عند بداية اللمس
-//         console.log("sidepar is open")
-//     }
-//     else if (isSidebarOpen) {
-//         // إذا كان السايد بار مفتوحًا، يمكن بدء السحب من أي مكان
-//         isDragging = true;
-//         currentX = startX;
-//         console.log("sidepar is closed")
-//     }
-// });
 
-// // عندما يتم تحريك اللمس
-// document.addEventListener('touchmove', (e) => {
-//     if (isDragging) {
-//         currentX = e.touches[0].clientX;
 
-//         // حساب الفرق بين الموقع الحالي وموقع البداية
-//         const deltaX = startX - currentX; // تعديل لاتجاه السحب (لليمين أو اليسار)
 
-//         if (!isSidebarOpen) {
-//             // إذا كان السايد بار مغلقًا وسُحب إلى اليسار لفتحه
-//             if (deltaX < 0) {
-//                 sidebar.style.right = Math.min(-deltaX, 500) + 'px';
-//             }
-//         } else {
-//             // إذا كان السايد بار مفتوحًا وسُحب إلى اليمين لإغلاقه
-//             if (deltaX > 0) {
-//                 sidebar.style.right = Math.max(-deltaX, -500) + 'px';
-//             }
-//         }
-//     }
-// });
 
-// // عندما ينتهي اللمس
-// document.addEventListener('touchend', () => {
-//     if (isDragging) {
-//         isDragging = false;
 
-//         // إذا كان الفرق كبيرًا كفاية لفتح أو إغلاق السايد بار
-//         if (!isSidebarOpen && startX - currentX > 100) {
-//             sidebar.style.right = '0'; // فتح السايد بار
-//             isSidebarOpen = true;
-//         } else if (isSidebarOpen && startX - currentX < -100) {
-//             sidebar.style.right = '-100%'; // إخفاء السايد بار
-//             isSidebarOpen = false;
-//         } else {
-//             // إرجاع السايد بار إلى حالته السابقة إذا لم يكن السحب كافيًا
-//             sidebar.style.right = isSidebarOpen ? '0' : '-100%';
-//         }
-//     }
-// });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const words = ["Talaat Gamal", "Front-end Developer"];
+let currentWordIndex = 0;
+let typingSpeed = 30;  
+let erasingSpeed = 30; 
+let delayBetweenWords = 2000;
+
+const dynamicTextElement = document.getElementById("dynamic-text");
+// const cursorElement = document.getElementById("cursor");
+
+
+function typeWord() {
+
+  let word = words[currentWordIndex];
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < word.length) {
+      dynamicTextElement.textContent += word.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(eraseWord, delayBetweenWords);
+    }
+  }
+
+  type();
+}
+
+function eraseWord() {
+  let word = words[currentWordIndex];
+  let charIndex = word.length;
+
+  function erase() {
+    if (charIndex > 0) {
+      dynamicTextElement.textContent = word.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, erasingSpeed);
+    } else {
+      currentWordIndex = (currentWordIndex + 1) % words.length; 
+      setTimeout(typeWord, typingSpeed);
+    }
+  }
+
+  erase();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(typeWord, typingSpeed + 1000); 
+});

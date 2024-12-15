@@ -54,17 +54,69 @@
     flex-direction: column;
     padding-bottom: 20vh;
 }
+.scroll-arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column; */
+  position: absolute;
+  top: 80vh;
+  left:auto;
+  right: auto;  /* background-color: #0072a3; */
+  transform: rotate(90deg);
+  /* animation: mmnbv 3s linear infinite; */
+}
+@keyframes mmnbv {
+  0% {
+      opacity: 0;
+      transform: translateX(0%);
+  }
+  20% {
+      opacity: 1;
+      transform: translateX(200%);
+  }
+  50% {
+      opacity: 0;
+  }
+  90% {
+      opacity: 1;
+      transform: translateX(400%);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(600%);
+  }
+}
+.scroll-arrow img{
+  width: 15px;
+  animation: mmnbv 3s linear infinite;
+}
+.name-loko{
+  position: absolute;
+  top: 45vh;
+  left:auto;
+  right: auto;
+}
+.name-loko h2{
+  /* font-family: "Playwrite HU", serif;
+  font-optical-sizing: auto;
+  font-weight: 500; */
+  font-style: italic;
+  color: #009297;
+  font-size: 30px;
+}
 .sidebar ul {
     list-style: none;
-    padding-top: 15vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-top: 10vh;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    gap: 40px;
-    min-height: 150vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 10px;
+    min-height: max-content;
     width: 425px;
 }
 .sidebar ul li {
@@ -78,9 +130,14 @@
     text-decoration: none;
     color: rgb(220, 220, 220);
     font-size: 20px;
-    border-bottom: #029aa58f solid 4px; 
+    /* border-bottom: #029aa58f solid 4px;  */
     width: 100%;
-    background-color: #1d546b4c;
+    background-color: #1d546b72;
+    border-radius: 5px;
+}
+.sidebar hr{
+  width: 100vw;
+  border: #009297 solid 1px;
 }
 .sidebar a img{
     display: inline-flex;
@@ -127,7 +184,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 30px;
+  padding: 0px;
   padding-top: 10%;
   padding-bottom: 10px;
   gap: 10px;
