@@ -12,6 +12,7 @@ html{
 }
 body{
     background-image: url(https://images.pexels.com/photos/17767835/pexels-photo-17767835/free-photo-of-composition-with-tablet.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    /* background-image: url(https://images.pexels.com/photos/7120865/pexels-photo-7120865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -40,7 +41,7 @@ a{
   justify-content: space-between;
   color: #ffffff;
   padding: 0px 10vw 0px 10vw;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .header span{
   /* background-color: #000000; */
@@ -48,16 +49,39 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 .header .qasxmn{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
   list-style: none;
   width: max-content;
   height: 100%;
+}
+.header .qasxmn li{
+  transition: 0.4s all ease;
+  position: relative;
+  display: inline-block;
+}
+.header .qasxmn li:hover{
+  transition: 0.4s all ease;
+}
+.header .qasxmn li::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff0055;
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-out;
+}
+.header .qasxmn li:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .header .qasxmn a{
   height: 100%;
@@ -66,9 +90,6 @@ a{
   align-items: center;
   justify-content: center;
   transition: 0.3s;
-}
-.header .qasxmn a:hover{
-  background-color: #00608d;
 }
 .header .ima{
   /* position: fixed;
@@ -82,7 +103,7 @@ a{
   animation: m-po09 10s linear infinite;
 }
 .header .ima img{
-  width: 30px;
+  width: 40px;
 }
 .header .ima i{
   transform: rotate(180deg);
@@ -130,38 +151,13 @@ a{
     padding-bottom: 20vh;
     padding-top: 20vh;
 }
-.rm-v9{
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  /* background: linear-gradient(to right, rgba(0, 217, 255, 0.288), rgba(0, 0, 0, 0.266) , rgba(0, 0, 0, 0.814) ); */
-  /* padding-top: 8vh; */
-  padding-left: 8vw;
-  padding-right: 8vw;
-  /* padding-bottom: 20vh; */
-  /* animation: moveShadow 3s infinite;  */
-  /* background-color: #000000; */
-}
-@keyframes moveShadow {
-  0% {
-    box-shadow: rgb(0, 208, 255) 0px 0px 30px 10px;
-  }
-  50% {
-    box-shadow: rgba(0, 164, 57, 0.427) 0px 0px 90px 90px;
-  }
-  100% {
-    box-shadow: rgb(0, 191, 255) 0px 0px 30px 10px;
-  }
-}
 #real-m{
   padding-left: 0vw;
   padding-right: 0vw;
   padding-bottom: 0vh;
   padding-top: 0vh;
+  background-color: #133636b3;
+  box-shadow: #133636b3 0px 0px 20px 20px;
 }
 .vbxz{
   display: flex;
@@ -339,11 +335,15 @@ a{
     padding-bottom: 8px;
     border-radius: 11px;
     transition: 0.3s;
-    border: rgb(2, 99, 83)  solid 3px;
+    border-bottom: rgb(6, 187, 157)  solid 5px;
+    box-shadow:  rgba(255, 255, 255, 0.496) 0px 0px 20px 5px;
+}
+#eye{
+  border-bottom: rgb(187, 6, 84) solid 5px;
 }
 .pro h3 a:hover{
-    border: rgb(6, 173, 145)  solid 3px;
-    box-shadow:  rgb(2, 162, 136) 0px 0px 20px 5px;
+  border-bottom: rgb(187, 6, 84) solid 5px;
+  box-shadow:  rgb(187, 6, 84) 0px 0px 20px 5px;
 }
 .pro h3 a img{
     width: 42px;
@@ -364,6 +364,7 @@ a{
 .pro:hover{
     border-bottom: rgb(0, 203, 203)  solid 6px;
     box-shadow:  rgb(2, 99, 83) 0px 0px 20px 5px;
+    border-radius: 0px;
 }
 
 .span1 , .span2{
@@ -431,7 +432,8 @@ a{
 }
 #v-9{
     /* background-image: url(https://www.pcworld.com/wp-content/uploads/2024/09/shutterstock_2290358085.jpg?quality=50&strip=all&w=1024); */
-    background-image: url(https://cdn.alweb.com/thumbs/shirkaty/article/fit710x532/1/%D8%B4%D8%B1%D9%83%D8%A9-%D9%8A%D9%88%D8%AA%D9%8A%D9%88%D8%A8-youtube.jpg);
+    /* background-image: url(https://cdn.alweb.com/thumbs/shirkaty/article/fit710x532/1/%D8%B4%D8%B1%D9%83%D8%A9-%D9%8A%D9%88%D8%AA%D9%8A%D9%88%D8%A8-youtube.jpg); */
+    background-image: url(https://vrextasy.com/upload/youtube-supports-k-live-streaming-for-degree-and-standard-video_2.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -507,7 +509,7 @@ a{
     background-position: 65%; */
     /* background-image: url(https://mir-s3-cdn-cf.behance.net/projects/404/096376197037781.Y3JvcCwxNjE2LDEyNjQsMCww.png); */
     /* background-image: url(../images/VBLMK.png); */
-    background-image: url(VBRFGHJ.png);
+    background-image: url(images/VBRFGHJ.png);
     background-position: center;
     background-size: cover;
 }
@@ -594,11 +596,11 @@ a{
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     /* background-color: rgba(0, 0, 0, 0.83); */
     background-color: #133636;
     font-weight: 700;
-    color: #747474;
+    color: #a3a3a3;
 }
 .footer h4{
     margin-left: 10px;
@@ -610,7 +612,10 @@ a{
   background-size: cover;
   background-attachment: fixed;
 } */
-@media (max-width:1080px) {
+@media (max-width:950px) {
+  body{
+    background-position: 80%;
+  }
     .container{
         gap: 15px;
         padding-left: 1vw;
@@ -643,6 +648,7 @@ a{
     .header{
       height: 6.5vh;
       padding: 0px 5vw 0px 5vw;
+      z-index: 11111;
     }
     .vbxz{
       justify-content: center;
@@ -656,7 +662,7 @@ a{
     .pro h3 a img{
       width: 50px;
   }
-  .rm-v9{
+  /* .rm-v9{
     background: linear-gradient(to right, rgba(0, 217, 255, 0.288), rgba(0, 0, 0, 0.266) , rgba(0, 0, 0, 0.537) );
-  }
+  } */
 }

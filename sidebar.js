@@ -45,52 +45,52 @@ menuIcon.addEventListener('click', function() {
 
 
 
-const words = ["Talaat Gamal", "Front-end Developer"];
-let currentWordIndex = 0;
-let typingSpeed = 30;  
-let erasingSpeed = 30; 
-let delayBetweenWords = 2000;
+// const words = ["Talaat Gamal", "Front-end Developer"];
+// let currentWordIndex = 0;
+// let typingSpeed = 30;  
+// let erasingSpeed = 30; 
+// let delayBetweenWords = 2000;
 
-const dynamicTextElement = document.getElementById("dynamic-text");
-// const cursorElement = document.getElementById("cursor");
+// const dynamicTextElement = document.getElementById("dynamic-text");
+// // const cursorElement = document.getElementById("cursor");
 
 
-function typeWord() {
+// function typeWord() {
 
-  let word = words[currentWordIndex];
-  let charIndex = 0;
+//   let word = words[currentWordIndex];
+//   let charIndex = 0;
 
-  function type() {
-    if (charIndex < word.length) {
-      dynamicTextElement.textContent += word.charAt(charIndex);
-      charIndex++;
-      setTimeout(type, typingSpeed);
-    } else {
-      setTimeout(eraseWord, delayBetweenWords);
-    }
-  }
+//   function type() {
+//     if (charIndex < word.length) {
+//       dynamicTextElement.textContent += word.charAt(charIndex);
+//       charIndex++;
+//       setTimeout(type, typingSpeed);
+//     } else {
+//       setTimeout(eraseWord, delayBetweenWords);
+//     }
+//   }
 
-  type();
-}
+//   type();
+// }
 
-function eraseWord() {
-  let word = words[currentWordIndex];
-  let charIndex = word.length;
+// function eraseWord() {
+//   let word = words[currentWordIndex];
+//   let charIndex = word.length;
 
-  function erase() {
-    if (charIndex > 0) {
-      dynamicTextElement.textContent = word.substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(erase, erasingSpeed);
-    } else {
-      currentWordIndex = (currentWordIndex + 1) % words.length; 
-      setTimeout(typeWord, typingSpeed);
-    }
-  }
+//   function erase() {
+//     if (charIndex > 0) {
+//       dynamicTextElement.textContent = word.substring(0, charIndex - 1);
+//       charIndex--;
+//       setTimeout(erase, erasingSpeed);
+//     } else {
+//       currentWordIndex = (currentWordIndex + 1) % words.length; 
+//       setTimeout(typeWord, typingSpeed);
+//     }
+//   }
 
-  erase();
-}
+//   erase();
+// }
 
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(typeWord, typingSpeed + 1000); 
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   setTimeout(typeWord, typingSpeed + 1000); 
+// });
