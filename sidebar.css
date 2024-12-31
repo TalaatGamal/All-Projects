@@ -41,22 +41,10 @@
     position: absolute;
     top:6.5vh;
     width: 100%;
-    height: 93.5vh;
+    height: 100vh;
     right: -1300px;
-    /* background-color: #000000c0; */
-    /* background-image: url(https://images.pexels.com/photos/10697688/pexels-photo-10697688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; */
     transition: right 0.4s ease;
     z-index: 998;
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    /* flex-direction: column; */
-    /* padding-bottom: 20vh; */
 }
 .front-side{
   width: 100%;
@@ -274,8 +262,9 @@
 .sircle{
   width: 35px;
   height: 40px;
-  border-top: #ffffff solid 4px;
-  border-bottom: #ff0000 solid 4px;
+  border: #ffffff solid 4px;
+  border-bottom: #0088ff solid 4px;
+  border-top: #0088ff solid 4px;
   border-radius: 100px;
   animation: rotate360 2s linear infinite;
   display: none;

@@ -41,7 +41,7 @@ a{
   justify-content: space-between;
   color: #ffffff;
   padding: 0px 10vw 0px 10vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .header span{
   /* background-color: #000000; */
@@ -414,7 +414,8 @@ a{
 
 #v-6{
     /* background-image: url(https://gate.ahram.org.eg/Media/News/2021/10/12/2021-637696538275094163-509.jpg); */
-    background-image: url(https://i0.wp.com/www.ibelieveinsci.com/wp-content/uploads/7lightning.png?fit=1024%2C576&ssl=1);
+    /* background-image: url(https://i0.wp.com/www.ibelieveinsci.com/wp-content/uploads/7lightning.png?fit=1024%2C576&ssl=1); */
+    background-image: url(https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-position: center;
     background-size: cover;
 }
