@@ -99,8 +99,13 @@ a{
   /* background-color: #000000b5;
   box-shadow: #000000b5 0px 0px 5px 2.5px; */
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 100px;
   animation: m-po09 10s linear infinite;
+  background-image: url(images/My-photo-img.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
 }
 .header .ima img{
   width: 40px;
