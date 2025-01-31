@@ -8,6 +8,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="form-rate.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,13 +25,8 @@
     <div class="header">
       
         <span>
-            <!-- <img src="https://cdn-icons-png.flaticon.com/128/16396/16396230.png" alt=""> -->
-            <!-- <i class="fa-solid fa-arrow-right-from-bracket"></i> -->
-            <!-- <img src="https://cdn-icons-png.freepik.com/256/4139/4139948.png?ga=GA1.1.1977550044.1720105698" alt=""> -->
-          </a>
           <a href="index.html" style="font-size: 20px; z-index: 1000;">Talaat Gamal's Projects</a>
-          </span>
-
+        </span>
         <ul class="qasxmn">
               <a href="#all-pr-812">
                 <li>All Projects</li>
@@ -41,176 +37,100 @@
               <!-- <a href="index.html" class="ima"></a> -->
               <li><a href="https://talaatgamal.github.io/My-Portfolio/" class="ima" id="vbf"></a></li>
 
-          </ul>
+        </ul>
 
-          <div class="menu-icon" id="menuIcon">
-            <span id="icon">☰</span>
-            <span id="exa"><i class="fa-solid fa-xmark" style="font-size: 28px;"></i></span>
-            </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-menu"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+      <div class="sidebar-content">
+        <div class="s-v-a">
           
-          <div class="sidebar" id="sidebar">
-            <div class="front-side">
-
-              <ul>
-                <hr style="border: #00d5ff00 solid 1px;">
-                <h2 style=" color: #637b7c;">
-                  Site sections
-                </h2>
-                <hr>
-                  
-                  <a href="#all-pr-812" id="homeu">
-                      <li>
-                        <img src="https://cdn-icons-png.freepik.com/256/5391/5391100.png?ga=GA1.1.1977550044.1720105698&semt=ais_hybrid" alt="">
-                        All Perfect Projects
-                      </li>
-                    </a>
-                  <a href="#real-m">
-                    <li>
-                      <img src="https://cdn-icons-png.freepik.com/256/6009/6009519.png?ga=GA1.1.1977550044.1720105698" alt="" >
-                      For Customers
-                    </li>
-                    </a>
-                  <!-- <a href="#login-9kl8u">
-                      <li>
-                        <img src="https://cdn-icons-png.freepik.com/256/2592/2592317.png?ga=GA1.1.1977550044.1720105698" alt="" >
-                        Next
-                      </li>
-                    </a> -->
-                  <div class="scroll-arrow">
-                    <img src="https://talaatgamal.github.io/My-Portfolio/images/arrow.png" alt="">
-                    <img src="https://talaatgamal.github.io/My-Portfolio/images/arrow.png" alt="">
-                    </div>
-
-                  <!-- space -->
-                  <hr style="  margin-top: 60vh;">
-
-                  <a href="https://github.com/TalaatGamal" style="background-color: #00000000; width: max-content;">
-                      <li>
-                        My GitHub
-                        <img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="" style="background-color: #000000b5;  border-radius: 50px; width: 35px;">
-                      </li>
-                    </a>
-                  <a href="https://talaatgamal.github.io/My-Portfolio/" style="background-color: #00000000; width: max-content;">
-                      <li>
-                        My Portfolio
-                        <div class="back-vk"></div>
-                      </li>
-                    </a>
-                    <!-- <img src="https://cdn-icons-gif.flaticon.com/7211/7211809.gif" alt="" class="vbn-fgh"> -->
-                    <h2 style="font-size: 20px; margin-top: 15vh;" class="kmilou87u">
-                      Your rating is important to me | تقييمك مهم
-                    </h2>
-                    <!-- <h2 style="font-size: 19px; text-align: right;" class="kmilou87u">
-                    
-                    </h2> -->
-                  
-                      <div class="message-me" id="message-me">
-                        <div class="rating" id="starRating">
-                          <span data-value="1" style="color: #00d5ff;">★</span>
-                          <span data-value="2">★</span>
-                          <span data-value="3">★</span>
-                          <span data-value="4">★</span>
-                          <span data-value="5">★</span>
-                        </div>
-                        <form id="contactForm" class="form">
-                          <input type="text" id="username" placeholder="Your Name" required>
-                          <input type="email" id="email" placeholder="Your Email" required>
-                          <textarea id="message" rows="4" cols="50" name="message" placeholder="Your Message" required></textarea>
-                      
-                      
-                          <div class="sipo">
-                            <div class="sircle" id="dira"></div>
-                            <button type="submit" style="cursor: pointer;">Send me</button>
-                          </div>
-                        </form>
-                      
-                        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-                        <script>
-                          emailjs.init("3o_Ok3aG0DS4-OWJo");
-                      
-                          const SUPABASE_URL = "https://lnohiidyljlwffoireap.supabase.co";
-                          const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxub2hpaWR5bGpsd2Zmb2lyZWFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI3MTc1ODMsImV4cCI6MjA0ODI5MzU4M30.kqRqH7iWFN1Id9DyN3k7y83o0YvIRbtbZiMtPBeaQIc";
-                          const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-                      
-                          const form = document.getElementById("contactForm");
-                          const stars = document.querySelectorAll("#starRating span");
-                          let selectedRating = 0;
-                      
-                          // إضافة الحدث عند الضغط على النجوم
-                          stars.forEach(star => {
-                            star.addEventListener("click", () => {
-                              selectedRating = star.getAttribute("data-value");
-                              updateStars(selectedRating);
-                            });
-                          });
-                      
-                          // تحديث ألوان النجوم
-                          function updateStars(rating) {
-                            stars.forEach(star => {
-                              if (star.getAttribute("data-value") <= rating) {
-                                star.classList.add("selected");
-                              } else {
-                                star.classList.remove("selected");
-                              }
-                            });
-                          }
-                      
-                          form.addEventListener("submit", async function (e) {
-                            e.preventDefault();
-                      
-                            if (!selectedRating) {
-                              alert("يرجى اختيار تقييم النجوم!");
-                              return;
-                            }
-                      
-                            const data = {
-                              username: document.getElementById("username").value,
-                              email: document.getElementById("email").value,
-                              message: document.getElementById("message").value,
-                              rating: selectedRating,
-                              timestamp: new Date().toISOString()
-                            };
-                      
-                            if (!data.username || !data.email || !data.message) {
-                              alert("يرجى تعبئة جميع الحقول!");
-                              return;
-                            }
-                      
-                            try {
-                              const { error } = await supabase.from("messages").insert([data]);
-                              document.getElementById("dira").style.display = "block";
-                              if (error) throw error;
-                      
-                              emailjs.send("service_jmd86we", "template_c7pd0tv", data).then(() => {
-                                document.getElementById("dira").style.display = "none";
-                              });
-                      
-                              alert("تم إرسال رسالتك بنجاح!");
-                              form.reset();
-                              updateStars(0);
-                            } catch (err) {
-                              console.error("خطأ أثناء الحفظ:", err);
-                              alert("حدث خطأ أثناء الحفظ!");
-                            }
-                          });
-                        </script>
-                      
-                      </div>
-                      
-                      
-                </ul>
-              <!-- <div class="name-loko">
-                <h2 id="dynamic-text"></h2>
-              </div> -->
-
+          <div class="form-div">
+            <div class="title-form-div">
+              <h2>I'm happy to work with you. <br> Thank you !!  ❤️</h2>
             </div>
+            <div class="message-me" id="message-me">
+      
+            <form id="contactForm" class="form">
+              <div class="rate-info">
+                  <div class="rating-input">
+                      <input type="number" id="ratingInput" min="1" max="5" placeholder="1--- Stars 1-5" required>
+                      <div class="stars-preview" id="starsPreview">
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                          <span>★</span>
+                      </div>
+                  </div>
+              </div>
+              <input type="text" id="serviceName" placeholder="2--- Service Name" required> <!-- تم إضافة حقل اسم الخدمة -->
+              <input type="text" id="username" placeholder="3--- Your Name" required>
+              <input type="email" id="email" placeholder="4--- Your Email" required>
+              <textarea id="message" rows="4" cols="50" name="message" placeholder="5--- Your Message" required></textarea>
+          
+              <div class="sipo">
+                  <div class="thanks">
+                      <h2>Sent. Thank you!🩵🥰</h2>
+                  </div>
+                  <div class="sircle" id="dira"></div>
+                  <button type="submit" style="cursor: pointer;">Send</button>
+              </div>
+          </form>
+          <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+      
+          </div>
+          </div>
+          <div class="back">
+            <h2 id="backbutton">
+              Back
+            </h2>
           </div>
 
-
+        </div>
+      <div class="s-c-v">
+      <ul class="list-side">
+        <li><a href="#all-pr-812"><i class="fa-solid fa-person-circle-check"></i>All Projects</a></li>
+        <li><a href="#real-m"><i class="fa-solid fa-address-card"></i>For Customers</a></li>
+        <li><a href="https://talaatgamal.github.io/My-Portfolio/" style="background-color: #000000;" id="mora"><img class="ima" id="vbfk">My Portfolio</a></li>
+        <li><a href="https://github.com/TalaatGamal" style="background-color: #000000;" id="mora"><img src="https://github.githubassets.com/favicons/favicon-dark.svg" alt="" style="background-color: #000000b5;  border-radius: 50px;">My GitHub</a></li>
+      </ul>
+      <div class="vata">
+        <h3> Talaat Gamal </h3>
       </div>
-      <div class="container" id="logo">
-        <h2>Tal<span>aa</span>t Gamal</h2>
+      <div class="rata">
+        <a href="#" id="rating-me">
+          rating me
+        </a>
       </div>
+      </div>
+      <div class="air-w-bar" id="air-w-bar">
+        <!-- <div class="xc">
+          <h2 id="back-x">X</h2>
+        </div> -->
+        <!-- <div class="top-w-bar">
+          <hr class="twb">
+          <hr class="twb2">
+        </div> -->
+        <div class="content-w-bar">
+          <!-- <div class="title-more">
+            <h2>More Options</h2>
+          </div> -->
+          <div class="vnm">
+            <i class="fa-solid fa-comment"></i>
+            <h2>Direct Message</h2>
+          </div>
+          <div class="vnm">
+            <i class="fa-solid fa-user-check"></i>
+            <h2>Reel Work</h2>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="container" id="logo">
+      <h2>Tal<span>aa</span>t Gamal</h2>
+    </div>
     <div class="container" id="all-pr-812">
       <!-- <div class="vbxz">
         <h4 class="lista">
@@ -365,15 +285,16 @@
         </div>
         
       
-      </div>
+    </div>
     <div class="container" id="real-m">
       
-      </div>
+    </div>
     <div class="footer">
         <h4>v2.0.0</h4>
         <h4>Talaat Gamal</h4>
         <h4>Created By 💙 NOV / 8 / 2024</h4>
       </div>
-    <script src="sidebar.js"></script>
+    <script src="main.js"></script>
+    <script src="form-rate.js"></script>
 </body>
 </html>

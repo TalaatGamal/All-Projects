@@ -22,12 +22,13 @@ body{
 }
 #all-pr-812{
   background-color: #3f666677;
-  padding-top: 0px;
+  /* padding-top: 0px; */
 }
 #logo{
   background-color: #3f666677;
   min-height: 20vh;
   padding-top: 25vh;
+  padding-bottom: 0px;
 }
 #logo h2{
   font-family: "Playwrite IN", serif;
@@ -61,6 +62,7 @@ a{
   justify-content: space-between;
   color: #ffffff;
   padding: 0px 10vw 0px 10vw;
+  z-index: 1000;
   /* overflow: hidden; */
 }
 .header span{
@@ -120,16 +122,6 @@ a{
   background-image: url(images/My-photo-img.jpg);
   background-position: center;
   background-size: cover;
-  /* width: 35px;
-  min-width: 35px;
-  min-height: 35px;
-  max-height: 35px; */
-}
-#vbf{
-  /* background-color: #000000;
-  width: 40px;
-  margin-left: 0px;
-  margin-right: 0px; */
 }
 .header .qasxmn #vbf{
   background-color: #000000;
@@ -633,13 +625,10 @@ a{
     margin-left: 10px;
     margin-right: 10px;
 }
-/* #real-m{
-  background-image: url(https://images.pexels.com/photos/8424452/pexels-photo-8424452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-} */
-@media (max-width:950px) {
+@media (max-width:1000px) {
+  .qasxmn{
+    display: none;
+  }
   body{
     background-position: 80%;
   }
@@ -673,9 +662,8 @@ a{
       display: none;
     }
     .header{
-      height: 6.5vh;
+      height: 7vh;
       padding: 0px 5vw 0px 5vw;
-      z-index: 11111;
     }
     .vbxz{
       justify-content: center;
@@ -689,7 +677,7 @@ a{
     .pro h3 a img{
       width: 50px;
   }
-  /* .rm-v9{
-    background: linear-gradient(to right, rgba(0, 217, 255, 0.288), rgba(0, 0, 0, 0.266) , rgba(0, 0, 0, 0.537) );
-  } */
+  #logo h2{
+    font-size: 45px;
+  }
 }
